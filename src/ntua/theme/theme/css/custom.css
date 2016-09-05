@@ -1,0 +1,79 @@
+.edu2_ft_topbar_des form input[type=text]{
+        float: left;
+        width: 100%;
+        border:1px solid #fff;
+        padding:7px 125px 7px 15px;
+        color: #fff;  
+        font-size: 16px;
+        text-transform: capitalize;
+        background-color: transparent;
+        height: 50px;
+        font-size: 14px !important;
+        box-shadow: none;
+}
+
+.edu2_ft_topbar_des form input[type="text"]:focus{
+        border-color: #fff !important;
+        box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3)
+}
+
+ul.navTree li.navTreeItem a:before {
+    content:"\f0da";
+    font-family:FontAwesome;
+    margin-right: 10px;
+}
+
+.edu2_main_bn_wrap figure figcaption {
+    right: 60%;
+    top: 35%;
+}
+
+.edu2_main_bn_wrap figure:before {
+    opacity: 0.125;
+}
+
+p a {
+    color: #841;
+}
+
+#edit-zone {
+    z-index: 15;
+}
+
+.lng_wrap button {
+    padding: 11px 15px;
+}
+
+// Google font, setting chinese font
+.kf_edu2_tab_wrap .nav-tabs > li > a {
+    font-family: 'Noto Sans TC', 'Ubuntu', sans-serif;
+}
+
+.edu2_pricing_des span h3{
+        font-family: 'Noto Sans TC', 'Ubuntu', sans-serif;
+}
+.edu2_pricing_des ul li a{
+        font-family: 'Noto Sans TC', 'Ubuntu', sans-serif;
+}
+.edu2_blogpg_des ul li{
+        font-family: 'Noto Sans TC', 'Open Sans', sans-serif;
+}
+.blog_3_sidebar a {
+    font-family: 'Noto Sans TC', 'Source Sans Pro', sans-serif;
+}
+.comment_des_hed cite a{
+        font-family: 'Noto Sans TC', 'Roboto Slab', serif;
+}
+.inputs_des.des_2 > span {
+        font-family: 'Noto Sans TC', "Raleway",sans-serif;
+}
+.inputs_des.des_3 > span {
+        font-family: 'Noto Sans TC', "Raleway",sans-serif;
+}
+.edu_masonery_thumb .caption a{
+        font-family: 'Noto Sans TC', 'Roboto Slab', serif;
+}
+
+#register .nav-tabs > li a{
+        font-family: 'Noto Sans TC', 'Droid Sans', sans-serif;
+}

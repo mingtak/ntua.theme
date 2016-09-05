@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <!-- Include the backend theme -->
+  <xi:include href="++theme++barceloneta/backend.xml" />
+
+  <!-- Only theme front end pages -->
+  <rules css:if-content="body.frontend#visual-portal-wrapper">
+
+    <theme href="index.html" />
+
+    <!-- Replace title with Plone's page title  -->
+    <replace
+      css:content="html head title"
+      css:theme="html head title"
+      />
+
+    <!-- Copy link, style, meta tags from Plone head -->
+    <before
+      content="/html/head/link | /html/head/style | /html/head/meta"
+      css:theme-children="html head"
+      />
+
+    <!-- merge classes from Plone body with theme body -->
+    <merge
+      attributes="class"
+      css:content="body"
+      css:theme="body"
+      />
+
+    <!-- Copy script tags from Plone head to end of body -->
+    <after
+      css:content="html head script"
+      css:theme-children="html body"
+      />
+
+    <!-- LOGO -->
+    <copy
+      attributes="href"
+      css:content="#portal-logo"
+      css:theme="div.logo_wrap a"
+      />
+    <copy
+      attributes="src"
+      css:content="#portal-logo img"
+      css:theme="div.logo_wrap a img"
+      />
+
+    <!-- PORTAL NAVIGATION -->
+    <replace
+      css:content-children="#portal-globalnav"
+      css:theme-children="#navigation ul.main-menu"
+      />
+    <drop css:theme="#sidr" />
+    <drop css:content="#portaltab-index_html" />
+
+    <!-- LOGIN (FOR ANONYMOUS USERS) -->
+    <replace
+      if-content="//li[@id='anon-personalbar']"
+      css:content="#personaltools-login"
+      css:theme=".dropdown-toggle"
+      />
+
+    <!-- USER NAME (FOR LOGGED-IN USERS) -->
+    <replace
+      if-content="not(//li[@id='anon-personalbar'])"
+      content="//a[@id='user-name']/text()"
+      css:theme="#user-name"
+      />
+
+    <!-- USER ACTIONS (FOR LOGGED-IN USERS) -->
+    <replace
+      if-content="not(//li[@id='anon-personalbar'])"
+      css:content-children="#portal-personaltools .actionMenuContent ul"
+      css:theme-children="#action-menu-content"
+      />
+
+    <!-- BREADCRUMBS -->
+    <replace
+      css:content-children="div#portal-breadcrumbs"
+      css:theme-children="ol.breadcrumb"
+      />
+    <drop css:content="span#breadcrumbs-you-are-here" />
+
+    <!-- EDIT BAR (CONTENT VIEWS) -->
+    <replace
+      css:content-children="#content-views"
+      css:theme-children="#contentViews"
+      />
+
+    <!-- EDIT BAR (DISPLAY) -->
+    <replace
+      css:content-children="#plone-contentmenu-display .actionMenuContent ul"
+      css:theme-children="#contentMenuDisplay"
+      />
+
+    <!-- EDIT BAR (ADD NEW) -->
+    <replace
+      css:content-children="#plone-contentmenu-factories .actionMenuContent ul"
+      css:theme-children="#contentMenuAddNew"
+      />
+
+    <!-- EDIT BAR (WORKFLOW STATE) -->
+    <replace
+      css:content-children="#plone-contentmenu-workflow .actionMenuContent ul"
+      css:theme-children="#contentMenuWorkflowState"
+      />
+    <!-- copy current workflow state into the -->
+    <replace
+      css:content="#plone-contentmenu-workflow .actionMenuHeader a span"
+      css:theme="#currentWorkflowState"
+      />
+    <!-- drop Plone dropdown arrow -->
+    <drop
+      css:content="#plone-contentmenu-workflow .arrowDownAlternative"
+      />
+
+    <!-- TODO: Cover Slide -->
+    <replace
+      css:content-children=".hero"
+      css:theme="div.edu2_main_bn_wrap"
+      />
+    <drop
+      css:if-not-content="body.portaltype-cover"
+      css:theme="div.edu2_main_bn_wrap"
+      />
+
+    <!-- CONTENT -->
+    <replace
+      css:content-children="#content-core"
+      css:theme-children=".kf_content_wrap"
+      />
+    <replace
+      css:if-not-content="#content-core"
+      css:content-children="#content"
+      css:theme-children=".kf_content_wrap"
+      />
+
+    <!-- FOOTER -->
+    <replace
+      css:content-children="#portal-footer-wrapper"
+      css:theme-children=".copyright_des"
+      />
+
+  </rules>
+
+</rules>
