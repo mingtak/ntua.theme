@@ -32,6 +32,7 @@ jQuery(document).ready(function($){
     ============================================================== */
 	if($('#owl-demo-main').length){
 		$("#owl-demo-main").owlCarousel({
+                  autoPlay: 5000, //Set AutoPlay to 5 seconds
 		  items : 1, //10 items above 1000px browser width
 		  itemsDesktop : [1000,1], //5 items between 1000px and 901px
 		  itemsDesktopSmall : [900,1], // betweem 900px and 601px

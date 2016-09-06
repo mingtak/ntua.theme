@@ -39,6 +39,11 @@
       css:theme-children="html body"
       />
 
+    <after
+      css:content-children=".script_to_footer"
+      css:theme-children="html body"
+      />
+
     <!-- LOGO -->
     <copy
       attributes="href"
@@ -135,6 +140,10 @@
       css:content-children="#content-core"
       css:theme-children=".kf_content_wrap"
       />
+    <after
+      css:content-children="div.member_viewlet"
+      css:theme-children=".kf_content_wrap"
+      />
     <replace
       css:if-not-content="#content-core"
       css:content-children="#content"
@@ -145,6 +154,11 @@
     <replace
       css:content-children="#portal-footer-wrapper"
       css:theme-children=".copyright_des"
+      />
+
+    <replace
+      css:content-children="footer.footer"
+      css:theme-children="footer"
       />
 
   </rules>
