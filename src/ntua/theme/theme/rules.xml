@@ -86,9 +86,9 @@
       />
 
     <!-- BREADCRUMBS -->
-    <replace
-      css:content-children="div#portal-breadcrumbs"
-      css:theme-children="ol.breadcrumb"
+    <after
+      css:content-children="nav#portal-breadcrumbs_front"
+      css:theme="header#header_2" if="$portal_type != 'Cover'"
       />
     <drop css:content="span#breadcrumbs-you-are-here" />
 

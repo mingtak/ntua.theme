@@ -1,3 +1,43 @@
+tr > td, tr > th {
+    border-color:#aaa !important;
+}
+
+thead tr{
+    background-color:#9cf;
+}
+
+tr.even {
+    background-color:#fd8;
+}
+
+.glyphicon {
+    display: none !important;
+}
+
+.bread_mid:before{
+    content: "\f101";
+    font-family: FontAwesome;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+section{
+    padding:25px 0px 25px 0px;
+}
+
+.breadcrumb{
+    padding-bottom:5px;
+    margin-bottom:5px;
+}
+
+.breadcrumb ul li a{
+    float: left;
+    padding:initail;
+}
+
+div.kf_content_wrap{
+}
+
 .edu2_ft_topbar_des form input[type=text]{
         float: left;
         width: 100%;
