@@ -1,8 +1,13 @@
 @media (max-width: 991px) {
+    #header_2 .top_bar_2 .container .row div:first-child {
+        display:initial;
+    }
+    #header_2 .top_bar_2 .container .row div.col-md-7 {
+        display:none;
+    }
     .kf_courses_tabs .nav-tabs > li {
         width: 50%;
     }
-
     .contct_wrap {
     display: -webkit-box;
     display: -moz-box;
