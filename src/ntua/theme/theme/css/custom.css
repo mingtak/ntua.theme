@@ -1,3 +1,34 @@
+@media (max-width: 991px) {
+    .kf_courses_tabs .nav-tabs > li {
+        width: 50%;
+    }
+
+    .contct_wrap {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    }
+    div.col-md-3.navbar {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .kf_courses_tabs .nav-tabs > li {
+        width: 100%;
+    }
+}
+
+.edu2_faculty_des:hover figure:before {
+    opacity: 0;
+}
+
 nav {
     float:right;
 }
@@ -39,6 +70,7 @@ nav.pagination li a:hover {
 
 .edu2_main_bn_wrap .owl-theme .owl-pagination {
     bottom: 20px;
+    left:85%;
 }
 
 ul.main-menu li.selected{
