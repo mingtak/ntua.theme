@@ -24,9 +24,18 @@
     }
 }
 
+@media (max-width: 767px) {
+    .owl-pagination {
+        display:none;
+    }
+}
+
 @media (max-width: 480px) {
     .kf_courses_tabs .nav-tabs > li {
         width: 100%;
+    }
+    .owl-pagination {
+        display:none;
     }
 }
 
