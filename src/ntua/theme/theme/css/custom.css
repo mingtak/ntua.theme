@@ -67,6 +67,11 @@
 
 }
 
+.wiget-instagram ul li img {
+    width: 100%;
+    height: 60px;
+}
+
 .edu2_faculty_des:hover figure:before {
     opacity: 0;
 }
